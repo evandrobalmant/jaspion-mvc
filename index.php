@@ -6,8 +6,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 //Define o caminho real para o diretório da aplicação
-define('PAINEL_PATH', dirname(__FILE__));
-define('APPLICATION_PATH', PAINEL_PATH . DIRECTORY_SEPARATOR . 'application');
+define('APPLICATION_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'application');
 
 //Seta os caminhos para o include_path do PHP
 set_include_path(implode(PATH_SEPARATOR, array(
