@@ -33,6 +33,7 @@ class Application {
 		$request_uri = strtolower(str_replace("index.php", "", $_SERVER['REQUEST_URI']));
 		$script_name = strtolower(str_replace("/index.php", "", $_SERVER['SCRIPT_NAME']));
 		$request = str_replace($script_name, "", $request_uri);
+		$request = strtok($request, '?'); //Igonorar query string
 		$request = rtrim($request, '/');
 		
 		if (!$request) $request = '/';
